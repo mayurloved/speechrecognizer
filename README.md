@@ -14,23 +14,45 @@ Support
 For free community support, please use the issue tracker.  
 To get professional non-free support for the plugin, please contact me at gcharhon(at)smartmobilesoftware.com.
 
-Screenshort
-------------
-![ScreenShot](http://www.excellentwebworld.com/wp-content/uploads/2013/11/sharethis.jpg)
 
 
 ### Automatically (CLI / Plugman)
 SocialSharing is compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman), compatible with [PhoneGap 3.0 CLI](http://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface_add_features), here's how it works with the CLI:
 
 ```
-$ phonegap local plugin add https://github.com/mayurloved/phonegap.git
+$ phonegap local plugin add https://github.com/mayurloved/speechrecognizer.git
 ```
 or
 ```
-$ cordova plugin add https://github.com/mayurloved/phonegap.git
+$ cordova plugin add https://github.com/mayurloved/speechrecognizer.git
 ```
 
+===> then include SpeechRecognizer.js file from www\plugins\com.phonegap.plugins.speech
+===> copy below html code in your html and Done
 
+
+----------------------------------------------- 
+If your want to include plugin manually then also you can include it.
+
+step 1 : LanguageDetailsChecker.java,SpeechRecognizer.java file in this package  com.phonegap.plugins.speech
+step 2 : add plugin in xml file
+for >3.0 or
+```	
+	 <feature name="SpeechRecognizer">
+        <param name="android-package" value="com.phonegap.plugins.speech.SpeechRecognizer" />
+    </feature>
+	
+	for <2.9 
+
+	   <plugin name="SpeechRecognizer" value="com.phonegap.plugins.speech.SpeechRecognizer"/>
+```
+step 3 : copy SpeechRecognizer.js file in your www folder and include in .html file 
+```
+	<script type="text/javascript" src="SpeechRecognizer.js"></script>
+``` 
+step 4 : include or copy or use below index.html file and check application.
+
+ 	
 * Create a 'com/phonegap/plugins/speech' folder under 'src' and add [LanguageDetailsChecker.java](LanguageDetailsChecker.java) and [SpeechRecognizer.java](SpeechRecognizer.java) to it.
 * Add [SpeechRecognizer.js](SpeechRecognizer.js) in your www folder.  
 * Add in your index.html  
