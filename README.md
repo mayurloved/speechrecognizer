@@ -45,9 +45,11 @@ for >3.0 or
     </feature>
 ```
 	for <2.9 
+	
 ```
 	   <plugin name="SpeechRecognizer" value="com.phonegap.plugins.speech.SpeechRecognizer"/>
 ```
+
 step 3 : copy SpeechRecognizer.js file in your www folder and include in .html file 
 
 	<script type="text/javascript" src="SpeechRecognizer.js"></script>
