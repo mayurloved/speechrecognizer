@@ -35,9 +35,10 @@ $ cordova plugin add https://github.com/mayurloved/speechrecognizer.git
 ----------------------------------------------- 
 If your want to include plugin manually then also you can include it.
 
-step 1 : LanguageDetailsChecker.java,SpeechRecognizer.java file in this package  com.phonegap.plugins.speech
+step 1 : Create a 'com/phonegap/plugins/speech' folder under 'src' and add [LanguageDetailsChecker.java](LanguageDetailsChecker.java) and [SpeechRecognizer.java](SpeechRecognizer.java) to it.
 
 step 2 : add plugin in xml file
+
 for >3.0 or
 ```	
 	 <feature name="SpeechRecognizer">
@@ -50,18 +51,22 @@ for >3.0 or
 	   <plugin name="SpeechRecognizer" value="com.phonegap.plugins.speech.SpeechRecognizer"/>
 ```
 
-step 3 : copy SpeechRecognizer.js file in your www folder and include in .html file 
-
+step 3 : copy SpeechRecognizer.js file in your www folder and Add in your index.html 
+```
 	<script type="text/javascript" src="SpeechRecognizer.js"></script>
-
+```
 step 4 : include or copy or use below index.html file and check application.
 
 
+Usage
+-------
 
 #### Start recognition
 Show the recognition dialog and get the recognized sentences
+
 SpeechRecognizer.startRecognize(success, error, maxMatches, promptString, language);
 parameters
+
 * success : The success callback. It provides a json array with all possible matches. Example: "[hello world,low world,hello walls]".
 * error : The error callback.
 * maxMaches : Maximum of returned possibles sentences matches.
@@ -76,7 +81,7 @@ parameters
 * success : The success callback. It provides a json array of all the recognized language codes. Example: "[en-US,fr-FR,de-DE]".
 * error : The error callback.
 
-index.html Full Example 
+Full example(index.html)
 ----------------
 ```
 <!DOCTYPE html>
