@@ -53,29 +53,14 @@ for >3.0 or
 step 3 : copy SpeechRecognizer.js file in your www folder and include in .html file 
 
 	<script type="text/javascript" src="SpeechRecognizer.js"></script>
-``` 
+
 step 4 : include or copy or use below index.html file and check application.
 
- 	
-* Create a 'com/phonegap/plugins/speech' folder under 'src' and add [LanguageDetailsChecker.java](LanguageDetailsChecker.java) and [SpeechRecognizer.java](SpeechRecognizer.java) to it.
-* Add [SpeechRecognizer.js](SpeechRecognizer.js) in your www folder.  
-* Add in your index.html  
-`<script type="text/javascript" charset="utf-8" src="SpeechRecognizer.js"></script>`  
-* In res/xml/config.xml, add 
 
-```xml
-<feature name="SpeechRecognizer">  
-      <param name="android-package" value="com.phonegap.plugins.speech.SpeechRecognizer"/>  
-</feature> 
-```    
-
-Usage
--------
 
 #### Start recognition
 Show the recognition dialog and get the recognized sentences
-
-    SpeechRecognizer.startRecognize(success, error, maxMatches, promptString, language);
+SpeechRecognizer.startRecognize(success, error, maxMatches, promptString, language);
 parameters
 * success : The success callback. It provides a json array with all possible matches. Example: "[hello world,low world,hello walls]".
 * error : The error callback.
@@ -91,9 +76,9 @@ parameters
 * success : The success callback. It provides a json array of all the recognized language codes. Example: "[en-US,fr-FR,de-DE]".
 * error : The error callback.
 
-Full example
+index.html Full Example 
 ----------------
-```html
+```
 <!DOCTYPE html>
 <html>
     <head>
