@@ -45,6 +45,7 @@ for >3.0 or
         <param name="android-package" value="com.phonegap.plugins.speech.SpeechRecognizer" />
     </feature>
 ```
+
 	for <2.9 
 	
 ```
