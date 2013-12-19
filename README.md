@@ -98,7 +98,7 @@ Full example
 <html>
     <head>
         <title>Speech Recognition plugin demo</title>
-        <script type="text/javascript" src="cordova-2.8.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="SpeechRecognizer.js"></script>
     </head>
     <body>
